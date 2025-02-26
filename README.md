@@ -28,7 +28,7 @@ To get started with this project, follow these steps:
    http://localhost:8888
    ```
 ## Contributing
-We welcome contributions to this project! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request. Please make sure to follow the contribution [guidelines](https://katherineoelsner.com/).
+We welcome contributions to this project! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request. Please make sure to follow the contribution [guidelines](https://github.com/oadekoya12/my_jupyter/discussions/).
 
 ## License
 This project is licensed under the open source [License](./LICENSE).
