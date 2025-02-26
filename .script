@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Get the current user's UID and GID
+USER_UID=$(id -u)
+USER_GID=$(id -g)
+
+# Set the Jupyter password
+JUPYTER_PASSWORD="password"
+
+# Log file to store the build output
+LOG_FILE="docker_build.log"
+
+# Check if the my_jupyter container already exists
+if [ "$(docker ps -aq -f name=my_jupyter)" ]; then
+    echo "Container 'my_jupyter' already exists. Stopping and removing it..."
+    # Stop the existing container
+    docker stop my_jupyter
+    # Remove the existing container
+    docker rm my_jupyter
+fi
+
+# Build the Docker image with the current user's UID, GID, and Jupyter password, and log the output
+docker build --build-arg USER_UID=$USER_UID --build-arg USER_GID=$USER_GID --build-arg JUPYTER_PASSWORD=$JUPYTER_PASSWORD -t my-jupyter-notebook . > $LOG_FILE 2>&1
+BUILD_STATUS=$?
+
+# Check if the build was successful
+if [ $BUILD_STATUS -eq 0 ]; then
+  echo "Docker image built successfully."
+  # Run the Docker container in the background with the specified name
+  docker run -d --name my_jupyter -p 8888:8888 my-jupyter-notebook
+  echo "Docker container 'my_jupyter' is running in the background."
+else
+  echo "Docker build failed. Check the log file for details."
+  cat $LOG_FILE
+  exit 1
+fi

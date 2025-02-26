@@ -1,0 +1,275 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.12kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/jupyter/base-notebook:latest
+#2 DONE 0.4s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [ 1/10] FROM docker.io/jupyter/base-notebook:latest@sha256:8c903974902b0e9d45d9823c2234411de0614c5c98c4bb782b3d4f55b3e435e6
+#4 resolve docker.io/jupyter/base-notebook:latest@sha256:8c903974902b0e9d45d9823c2234411de0614c5c98c4bb782b3d4f55b3e435e6 0.0s done
+#4 DONE 0.0s
+
+#5 [ 2/10] WORKDIR /home/jovyan
+#5 CACHED
+
+#6 [ 3/10] RUN pip install notebook==6.* &&     pip install pandas &&     pip install scikit-learn &&     pip install matplotlib &&     pip install seaborn &&     pip install nltk &&     pip install beautifulsoup4
+#6 ...
+
+#7 [internal] load build context
+#7 transferring context: 73B done
+#7 DONE 0.0s
+
+#6 [ 3/10] RUN pip install notebook==6.* &&     pip install pandas &&     pip install scikit-learn &&     pip install matplotlib &&     pip install seaborn &&     pip install nltk &&     pip install beautifulsoup4
+#6 0.936 Collecting notebook==6.*
+#6 1.032   Downloading notebook-6.5.7-py3-none-any.whl.metadata (2.5 kB)
+#6 1.077 Requirement already satisfied: jinja2 in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (3.1.2)
+#6 1.079 Requirement already satisfied: tornado>=6.1 in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (6.3.3)
+#6 1.081 Requirement already satisfied: pyzmq>=17 in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (25.1.1)
+#6 1.083 Requirement already satisfied: argon2-cffi in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (23.1.0)
+#6 1.086 Requirement already satisfied: traitlets>=4.2.1 in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (5.11.2)
+#6 1.088 Requirement already satisfied: jupyter-core>=4.6.1 in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (5.4.0)
+#6 1.188 Collecting jupyter-client<8,>=5.3.4 (from notebook==6.*)
+#6 1.221   Downloading jupyter_client-7.4.9-py3-none-any.whl.metadata (8.5 kB)
+#6 1.243 Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (0.2.0)
+#6 1.244 Requirement already satisfied: nbformat in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (5.9.2)
+#6 1.247 Requirement already satisfied: nbconvert>=5 in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (7.9.2)
+#6 1.249 Requirement already satisfied: nest-asyncio>=1.5 in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (1.5.8)
+#6 1.251 Requirement already satisfied: ipykernel in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (6.25.2)
+#6 1.254 Requirement already satisfied: Send2Trash>=1.8.0 in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (1.8.2)
+#6 1.257 Requirement already satisfied: terminado>=0.8.3 in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (0.17.1)
+#6 1.260 Requirement already satisfied: prometheus-client in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (0.17.1)
+#6 1.262 Requirement already satisfied: nbclassic>=0.4.7 in /opt/conda/lib/python3.11/site-packages (from notebook==6.*) (1.0.0)
+#6 1.283 Requirement already satisfied: entrypoints in /opt/conda/lib/python3.11/site-packages (from jupyter-client<8,>=5.3.4->notebook==6.*) (0.4)
+#6 1.286 Requirement already satisfied: python-dateutil>=2.8.2 in /opt/conda/lib/python3.11/site-packages (from jupyter-client<8,>=5.3.4->notebook==6.*) (2.8.2)
+#6 1.303 Requirement already satisfied: platformdirs>=2.5 in /opt/conda/lib/python3.11/site-packages (from jupyter-core>=4.6.1->notebook==6.*) (3.11.0)
+#6 1.349 Requirement already satisfied: jupyter-server>=1.8 in /opt/conda/lib/python3.11/site-packages (from nbclassic>=0.4.7->notebook==6.*) (2.8.0)
+#6 1.352 Requirement already satisfied: notebook-shim>=0.2.3 in /opt/conda/lib/python3.11/site-packages (from nbclassic>=0.4.7->notebook==6.*) (0.2.3)
+#6 1.385 Requirement already satisfied: beautifulsoup4 in /opt/conda/lib/python3.11/site-packages (from nbconvert>=5->notebook==6.*) (4.12.2)
+#6 1.389 Requirement already satisfied: bleach!=5.0.0 in /opt/conda/lib/python3.11/site-packages (from nbconvert>=5->notebook==6.*) (6.1.0)
+#6 1.392 Requirement already satisfied: defusedxml in /opt/conda/lib/python3.11/site-packages (from nbconvert>=5->notebook==6.*) (0.7.1)
+#6 1.395 Requirement already satisfied: jupyterlab-pygments in /opt/conda/lib/python3.11/site-packages (from nbconvert>=5->notebook==6.*) (0.2.2)
+#6 1.397 Requirement already satisfied: markupsafe>=2.0 in /opt/conda/lib/python3.11/site-packages (from nbconvert>=5->notebook==6.*) (2.1.3)
+#6 1.399 Requirement already satisfied: mistune<4,>=2.0.3 in /opt/conda/lib/python3.11/site-packages (from nbconvert>=5->notebook==6.*) (3.0.1)
+#6 1.402 Requirement already satisfied: nbclient>=0.5.0 in /opt/conda/lib/python3.11/site-packages (from nbconvert>=5->notebook==6.*) (0.8.0)
+#6 1.404 Requirement already satisfied: packaging in /opt/conda/lib/python3.11/site-packages (from nbconvert>=5->notebook==6.*) (23.2)
+#6 1.407 Requirement already satisfied: pandocfilters>=1.4.1 in /opt/conda/lib/python3.11/site-packages (from nbconvert>=5->notebook==6.*) (1.5.0)
+#6 1.409 Requirement already satisfied: pygments>=2.4.1 in /opt/conda/lib/python3.11/site-packages (from nbconvert>=5->notebook==6.*) (2.16.1)
+#6 1.411 Requirement already satisfied: tinycss2 in /opt/conda/lib/python3.11/site-packages (from nbconvert>=5->notebook==6.*) (1.2.1)
+#6 1.429 Requirement already satisfied: fastjsonschema in /opt/conda/lib/python3.11/site-packages (from nbformat->notebook==6.*) (2.18.1)
+#6 1.432 Requirement already satisfied: jsonschema>=2.6 in /opt/conda/lib/python3.11/site-packages (from nbformat->notebook==6.*) (4.19.1)
+#6 1.461 Requirement already satisfied: ptyprocess in /opt/conda/lib/python3.11/site-packages (from terminado>=0.8.3->notebook==6.*) (0.7.0)
+#6 1.491 Requirement already satisfied: argon2-cffi-bindings in /opt/conda/lib/python3.11/site-packages (from argon2-cffi->notebook==6.*) (21.2.0)
+#6 1.540 Requirement already satisfied: comm>=0.1.1 in /opt/conda/lib/python3.11/site-packages (from ipykernel->notebook==6.*) (0.1.4)
+#6 1.542 Requirement already satisfied: debugpy>=1.6.5 in /opt/conda/lib/python3.11/site-packages (from ipykernel->notebook==6.*) (1.8.0)
+#6 1.545 Requirement already satisfied: ipython>=7.23.1 in /opt/conda/lib/python3.11/site-packages (from ipykernel->notebook==6.*) (8.16.1)
+#6 1.567 Requirement already satisfied: matplotlib-inline>=0.1 in /opt/conda/lib/python3.11/site-packages (from ipykernel->notebook==6.*) (0.1.6)
+#6 1.572 Requirement already satisfied: psutil in /opt/conda/lib/python3.11/site-packages (from ipykernel->notebook==6.*) (5.9.5)
+#6 1.594 Requirement already satisfied: six>=1.9.0 in /opt/conda/lib/python3.11/site-packages (from bleach!=5.0.0->nbconvert>=5->notebook==6.*) (1.16.0)
+#6 1.595 Requirement already satisfied: webencodings in /opt/conda/lib/python3.11/site-packages (from bleach!=5.0.0->nbconvert>=5->notebook==6.*) (0.5.1)
+#6 1.677 Requirement already satisfied: backcall in /opt/conda/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->notebook==6.*) (0.2.0)
+#6 1.679 Requirement already satisfied: decorator in /opt/conda/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->notebook==6.*) (5.1.1)
+#6 1.683 Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->notebook==6.*) (0.19.1)
+#6 1.684 Requirement already satisfied: pickleshare in /opt/conda/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->notebook==6.*) (0.7.5)
+#6 1.687 Requirement already satisfied: prompt-toolkit!=3.0.37,<3.1.0,>=3.0.30 in /opt/conda/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->notebook==6.*) (3.0.39)
+#6 1.690 Requirement already satisfied: stack-data in /opt/conda/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->notebook==6.*) (0.6.2)
+#6 1.694 Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->notebook==6.*) (4.8.0)
+#6 1.724 Requirement already satisfied: attrs>=22.2.0 in /opt/conda/lib/python3.11/site-packages (from jsonschema>=2.6->nbformat->notebook==6.*) (23.1.0)
+#6 1.726 Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /opt/conda/lib/python3.11/site-packages (from jsonschema>=2.6->nbformat->notebook==6.*) (2023.7.1)
+#6 1.729 Requirement already satisfied: referencing>=0.28.4 in /opt/conda/lib/python3.11/site-packages (from jsonschema>=2.6->nbformat->notebook==6.*) (0.30.2)
+#6 1.731 Requirement already satisfied: rpds-py>=0.7.1 in /opt/conda/lib/python3.11/site-packages (from jsonschema>=2.6->nbformat->notebook==6.*) (0.10.6)
+#6 1.781 Requirement already satisfied: anyio>=3.1.0 in /opt/conda/lib/python3.11/site-packages (from jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (4.0.0)
+#6 1.803 Requirement already satisfied: jupyter-events>=0.6.0 in /opt/conda/lib/python3.11/site-packages (from jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (0.8.0)
+#6 1.805 Requirement already satisfied: jupyter-server-terminals in /opt/conda/lib/python3.11/site-packages (from jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (0.4.4)
+#6 1.809 Requirement already satisfied: overrides in /opt/conda/lib/python3.11/site-packages (from jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (7.4.0)
+#6 1.815 Requirement already satisfied: websocket-client in /opt/conda/lib/python3.11/site-packages (from jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (1.6.4)
+#6 1.924 Requirement already satisfied: cffi>=1.0.1 in /opt/conda/lib/python3.11/site-packages (from argon2-cffi-bindings->argon2-cffi->notebook==6.*) (1.16.0)
+#6 1.938 Requirement already satisfied: soupsieve>1.2 in /opt/conda/lib/python3.11/site-packages (from beautifulsoup4->nbconvert>=5->notebook==6.*) (2.5)
+#6 2.040 Requirement already satisfied: idna>=2.8 in /opt/conda/lib/python3.11/site-packages (from anyio>=3.1.0->jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (3.4)
+#6 2.043 Requirement already satisfied: sniffio>=1.1 in /opt/conda/lib/python3.11/site-packages (from anyio>=3.1.0->jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (1.3.0)
+#6 2.083 Requirement already satisfied: pycparser in /opt/conda/lib/python3.11/site-packages (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi->notebook==6.*) (2.21)
+#6 2.124 Requirement already satisfied: parso<0.9.0,>=0.8.3 in /opt/conda/lib/python3.11/site-packages (from jedi>=0.16->ipython>=7.23.1->ipykernel->notebook==6.*) (0.8.3)
+#6 2.162 Requirement already satisfied: python-json-logger>=2.0.4 in /opt/conda/lib/python3.11/site-packages (from jupyter-events>=0.6.0->jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (2.0.7)
+#6 2.164 Requirement already satisfied: pyyaml>=5.3 in /opt/conda/lib/python3.11/site-packages (from jupyter-events>=0.6.0->jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (6.0.1)
+#6 2.166 Requirement already satisfied: rfc3339-validator in /opt/conda/lib/python3.11/site-packages (from jupyter-events>=0.6.0->jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (0.1.4)
+#6 2.169 Requirement already satisfied: rfc3986-validator>=0.1.1 in /opt/conda/lib/python3.11/site-packages (from jupyter-events>=0.6.0->jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (0.1.1)
+#6 2.190 Requirement already satisfied: wcwidth in /opt/conda/lib/python3.11/site-packages (from prompt-toolkit!=3.0.37,<3.1.0,>=3.0.30->ipython>=7.23.1->ipykernel->notebook==6.*) (0.2.8)
+#6 2.309 Requirement already satisfied: executing>=1.2.0 in /opt/conda/lib/python3.11/site-packages (from stack-data->ipython>=7.23.1->ipykernel->notebook==6.*) (1.2.0)
+#6 2.312 Requirement already satisfied: asttokens>=2.1.0 in /opt/conda/lib/python3.11/site-packages (from stack-data->ipython>=7.23.1->ipykernel->notebook==6.*) (2.4.0)
+#6 2.313 Requirement already satisfied: pure-eval in /opt/conda/lib/python3.11/site-packages (from stack-data->ipython>=7.23.1->ipykernel->notebook==6.*) (0.2.2)
+#6 2.397 Requirement already satisfied: fqdn in /opt/conda/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.6.0->jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (1.5.1)
+#6 2.401 Requirement already satisfied: isoduration in /opt/conda/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.6.0->jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (20.11.0)
+#6 2.404 Requirement already satisfied: jsonpointer>1.13 in /opt/conda/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.6.0->jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (2.4)
+#6 2.408 Requirement already satisfied: uri-template in /opt/conda/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.6.0->jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (1.3.0)
+#6 2.411 Requirement already satisfied: webcolors>=1.11 in /opt/conda/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.6.0->jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (1.13)
+#6 2.545 Requirement already satisfied: arrow>=0.15.0 in /opt/conda/lib/python3.11/site-packages (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.6.0->jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (1.3.0)
+#6 2.597 Requirement already satisfied: types-python-dateutil>=2.8.10 in /opt/conda/lib/python3.11/site-packages (from arrow>=0.15.0->isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.6.0->jupyter-server>=1.8->nbclassic>=0.4.7->notebook==6.*) (2.8.19.14)
+#6 2.642 Downloading notebook-6.5.7-py3-none-any.whl (529 kB)
+#6 2.737    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 529.8/529.8 kB 5.8 MB/s eta 0:00:00
+#6 2.763 Downloading jupyter_client-7.4.9-py3-none-any.whl (133 kB)
+#6 2.782    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.5/133.5 kB 8.2 MB/s eta 0:00:00
+#6 3.805 Installing collected packages: jupyter-client, notebook
+#6 3.805   Attempting uninstall: jupyter-client
+#6 3.831     Found existing installation: jupyter_client 8.4.0
+#6 3.839     Uninstalling jupyter_client-8.4.0:
+#6 3.880       Successfully uninstalled jupyter_client-8.4.0
+#6 4.001   Attempting uninstall: notebook
+#6 4.037     Found existing installation: notebook 7.0.6
+#6 4.052     Uninstalling notebook-7.0.6:
+#6 4.143       Successfully uninstalled notebook-7.0.6
+#6 4.415 Successfully installed jupyter-client-7.4.9 notebook-6.5.7
+#6 5.389 Collecting pandas
+#6 5.510   Downloading pandas-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+#6 5.561      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.9/89.9 kB 1.7 MB/s eta 0:00:00
+#6 6.037 Collecting numpy>=1.23.2 (from pandas)
+#6 6.098   Downloading numpy-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#6 6.124      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.3 MB/s eta 0:00:00
+#6 6.144 Requirement already satisfied: python-dateutil>=2.8.2 in /opt/conda/lib/python3.11/site-packages (from pandas) (2.8.2)
+#6 6.147 Requirement already satisfied: pytz>=2020.1 in /opt/conda/lib/python3.11/site-packages (from pandas) (2023.3.post1)
+#6 6.209 Collecting tzdata>=2022.7 (from pandas)
+#6 6.239   Downloading tzdata-2025.1-py2.py3-none-any.whl.metadata (1.4 kB)
+#6 6.257 Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.11/site-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)
+#6 6.336 Downloading pandas-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+#6 7.679    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 10.4 MB/s eta 0:00:00
+#6 7.711 Downloading numpy-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.4 MB)
+#6 9.355    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.4/16.4 MB 10.0 MB/s eta 0:00:00
+#6 9.388 Downloading tzdata-2025.1-py2.py3-none-any.whl (346 kB)
+#6 9.454    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.8/346.8 kB 5.7 MB/s eta 0:00:00
+#6 10.64 Installing collected packages: tzdata, numpy, pandas
+#6 17.63 Successfully installed numpy-2.2.3 pandas-2.2.3 tzdata-2025.1
+#6 18.58 Collecting scikit-learn
+#6 18.66   Downloading scikit_learn-1.6.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+#6 18.75 Requirement already satisfied: numpy>=1.19.5 in /opt/conda/lib/python3.11/site-packages (from scikit-learn) (2.2.3)
+#6 19.02 Collecting scipy>=1.6.0 (from scikit-learn)
+#6 19.05   Downloading scipy-1.15.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#6 19.07      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.6 MB/s eta 0:00:00
+#6 19.15 Collecting joblib>=1.2.0 (from scikit-learn)
+#6 19.17   Downloading joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+#6 19.22 Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+#6 19.23   Downloading threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+#6 19.33 Downloading scikit_learn-1.6.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.5 MB)
+#6 20.38    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.5/13.5 MB 13.3 MB/s eta 0:00:00
+#6 20.42 Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+#6 20.51    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 301.8/301.8 kB 3.7 MB/s eta 0:00:00
+#6 20.55 Downloading scipy-1.15.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.6 MB)
+#6 23.87    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.6/37.6 MB 10.5 MB/s eta 0:00:00
+#6 23.89 Downloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+#6 25.28 Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+#6 31.22 Successfully installed joblib-1.4.2 scikit-learn-1.6.1 scipy-1.15.2 threadpoolctl-3.5.0
+#6 32.25 Collecting matplotlib
+#6 32.34   Downloading matplotlib-3.10.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+#6 32.53 Collecting contourpy>=1.0.1 (from matplotlib)
+#6 32.58   Downloading contourpy-1.3.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.4 kB)
+#6 32.67 Collecting cycler>=0.10 (from matplotlib)
+#6 32.68   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#6 32.98 Collecting fonttools>=4.22.0 (from matplotlib)
+#6 33.01   Downloading fonttools-4.56.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (101 kB)
+#6 33.06      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.9/101.9 kB 2.1 MB/s eta 0:00:00
+#6 33.20 Collecting kiwisolver>=1.3.1 (from matplotlib)
+#6 33.23   Downloading kiwisolver-1.4.8-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.2 kB)
+#6 33.26 Requirement already satisfied: numpy>=1.23 in /opt/conda/lib/python3.11/site-packages (from matplotlib) (2.2.3)
+#6 33.26 Requirement already satisfied: packaging>=20.0 in /opt/conda/lib/python3.11/site-packages (from matplotlib) (23.2)
+#6 33.66 Collecting pillow>=8 (from matplotlib)
+#6 33.70   Downloading pillow-11.1.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+#6 33.80 Collecting pyparsing>=2.3.1 (from matplotlib)
+#6 33.82   Downloading pyparsing-3.2.1-py3-none-any.whl.metadata (5.0 kB)
+#6 33.83 Requirement already satisfied: python-dateutil>=2.7 in /opt/conda/lib/python3.11/site-packages (from matplotlib) (2.8.2)
+#6 33.94 Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib) (1.16.0)
+#6 34.11 Downloading matplotlib-3.10.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.6 MB)
+#6 34.71    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 12.3 MB/s eta 0:00:00
+#6 34.74 Downloading contourpy-1.3.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (326 kB)
+#6 34.76    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 326.2/326.2 kB 12.0 MB/s eta 0:00:00
+#6 34.79 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#6 34.83 Downloading fonttools-4.56.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.9 MB)
+#6 35.49    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 7.5 MB/s eta 0:00:00
+#6 35.53 Downloading kiwisolver-1.4.8-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.4 MB)
+#6 35.64    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 13.7 MB/s eta 0:00:00
+#6 35.66 Downloading pillow-11.1.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.5 MB)
+#6 35.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 14.8 MB/s eta 0:00:00
+#6 36.02 Downloading pyparsing-3.2.1-py3-none-any.whl (107 kB)
+#6 36.04    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.7/107.7 kB 7.7 MB/s eta 0:00:00
+#6 37.35 Installing collected packages: pyparsing, pillow, kiwisolver, fonttools, cycler, contourpy, matplotlib
+#6 40.06 Successfully installed contourpy-1.3.1 cycler-0.12.1 fonttools-4.56.0 kiwisolver-1.4.8 matplotlib-3.10.0 pillow-11.1.0 pyparsing-3.2.1
+#6 40.87 Collecting seaborn
+#6 40.97   Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+#6 41.01 Requirement already satisfied: numpy!=1.24.0,>=1.20 in /opt/conda/lib/python3.11/site-packages (from seaborn) (2.2.3)
+#6 41.03 Requirement already satisfied: pandas>=1.2 in /opt/conda/lib/python3.11/site-packages (from seaborn) (2.2.3)
+#6 41.03 Requirement already satisfied: matplotlib!=3.6.1,>=3.4 in /opt/conda/lib/python3.11/site-packages (from seaborn) (3.10.0)
+#6 41.04 Requirement already satisfied: contourpy>=1.0.1 in /opt/conda/lib/python3.11/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (1.3.1)
+#6 41.05 Requirement already satisfied: cycler>=0.10 in /opt/conda/lib/python3.11/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (0.12.1)
+#6 41.05 Requirement already satisfied: fonttools>=4.22.0 in /opt/conda/lib/python3.11/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (4.56.0)
+#6 41.05 Requirement already satisfied: kiwisolver>=1.3.1 in /opt/conda/lib/python3.11/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (1.4.8)
+#6 41.06 Requirement already satisfied: packaging>=20.0 in /opt/conda/lib/python3.11/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (23.2)
+#6 41.06 Requirement already satisfied: pillow>=8 in /opt/conda/lib/python3.11/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (11.1.0)
+#6 41.06 Requirement already satisfied: pyparsing>=2.3.1 in /opt/conda/lib/python3.11/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (3.2.1)
+#6 41.07 Requirement already satisfied: python-dateutil>=2.7 in /opt/conda/lib/python3.11/site-packages (from matplotlib!=3.6.1,>=3.4->seaborn) (2.8.2)
+#6 41.17 Requirement already satisfied: pytz>=2020.1 in /opt/conda/lib/python3.11/site-packages (from pandas>=1.2->seaborn) (2023.3.post1)
+#6 41.17 Requirement already satisfied: tzdata>=2022.7 in /opt/conda/lib/python3.11/site-packages (from pandas>=1.2->seaborn) (2025.1)
+#6 41.27 Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib!=3.6.1,>=3.4->seaborn) (1.16.0)
+#6 41.32 Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+#6 41.37    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.9/294.9 kB 5.9 MB/s eta 0:00:00
+#6 42.68 Installing collected packages: seaborn
+#6 42.88 Successfully installed seaborn-0.13.2
+#6 43.66 Collecting nltk
+#6 43.85   Downloading nltk-3.9.1-py3-none-any.whl.metadata (2.9 kB)
+#6 43.97 Collecting click (from nltk)
+#6 44.06   Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+#6 44.08 Requirement already satisfied: joblib in /opt/conda/lib/python3.11/site-packages (from nltk) (1.4.2)
+#6 45.27 Collecting regex>=2021.8.3 (from nltk)
+#6 45.30   Downloading regex-2024.11.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (40 kB)
+#6 45.33      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 1.3 MB/s eta 0:00:00
+#6 45.34 Requirement already satisfied: tqdm in /opt/conda/lib/python3.11/site-packages (from nltk) (4.66.1)
+#6 45.38 Downloading nltk-3.9.1-py3-none-any.whl (1.5 MB)
+#6 46.61    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 1.3 MB/s eta 0:00:00
+#6 46.68 Downloading regex-2024.11.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (792 kB)
+#6 46.83    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 792.7/792.7 kB 5.2 MB/s eta 0:00:00
+#6 46.85 Downloading click-8.1.8-py3-none-any.whl (98 kB)
+#6 46.87    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 4.8 MB/s eta 0:00:00
+#6 48.40 Installing collected packages: regex, click, nltk
+#6 49.44 Successfully installed click-8.1.8 nltk-3.9.1 regex-2024.11.6
+#6 50.06 Requirement already satisfied: beautifulsoup4 in /opt/conda/lib/python3.11/site-packages (4.12.2)
+#6 50.07 Requirement already satisfied: soupsieve>1.2 in /opt/conda/lib/python3.11/site-packages (from beautifulsoup4) (2.5)
+#6 DONE 51.7s
+
+#8 [ 4/10] COPY start-jupyter.sh /home/jovyan/start-jupyter.sh
+#8 DONE 0.1s
+
+#9 [ 5/10] COPY generate_hash.py /home/jovyan/generate_hash.py
+#9 DONE 0.0s
+
+#10 [ 6/10] RUN usermod -u 1000 jovyan &&     groupmod -g 1000 users &&     chown -R jovyan:users /home/jovyan
+#10 0.313 usermod: no changes
+#10 DONE 0.9s
+
+#11 [ 7/10] RUN chmod +x /home/jovyan/start-jupyter.sh
+#11 DONE 0.4s
+
+#12 [ 8/10] RUN python /home/jovyan/generate_hash.py > /home/jovyan/password_hash.txt
+#12 DONE 0.8s
+
+#13 [ 9/10] RUN echo "c.NotebookApp.password = '$(cat /home/jovyan/password_hash.txt)'" > /home/jovyan/.jupyter/jupyter_notebook_config.py &&     echo "c.NotebookApp.open_browser = False" >> /home/jovyan/.jupyter/jupyter_notebook_config.py &&     echo "c.NotebookApp.allow_root = True" >> /home/jovyan/.jupyter/jupyter_notebook_config.py &&     echo "c.NotebookApp.ip = '*'" >> /home/jovyan/.jupyter/jupyter_notebook_config.py &&     echo "c.NotebookApp.port = 8888" >> /home/jovyan/.jupyter/jupyter_notebook_config.py
+#13 DONE 0.6s
+
+#14 [10/10] RUN ln -s /opt/conda/bin/python /usr/local/bin/python &&     ln -s /opt/conda/bin/jupyter /usr/local/bin/jupyter
+#14 DONE 0.5s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 22.8s done
+#15 exporting manifest sha256:8b92e9b0e764c5b5fa980632b6c892224c2231ec550278696b826573a8281d94 0.0s done
+#15 exporting config sha256:51c8045c15c2a1f9593e22b8045961f647e6d4f1f15a6c41b3ac5e7048641efd 0.0s done
+#15 exporting attestation manifest sha256:5018a0a9bb79b0e35845aef5baea497efa0d8fd2716943b083659948c7484188 0.0s done
+#15 exporting manifest list sha256:a9312fe516ffb39533b27248fa97bee8007f44535e2b57e3cfa9d1a31e33a9b7 0.0s done
+#15 naming to docker.io/library/my-jupyter-notebook:latest done
+#15 unpacking to docker.io/library/my-jupyter-notebook:latest
+#15 unpacking to docker.io/library/my-jupyter-notebook:latest 7.2s done
+#15 DONE 30.2s
+
+ [33m2 warnings found (use docker --debug to expand):
+[0m - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ARG "JUPYTER_PASSWORD") (line 23)
+ - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ENV "JUPYTER_PASSWORD") (line 35)
